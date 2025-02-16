@@ -1,0 +1,614 @@
+/* ====== RESET GENERAL ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ====== PALETA COLORES ====== */
+:root {
+    --color-primario: #0b3d91; /* Azul oscuro */
+    --color-secundario: #1a73e8; /* Azul Google */
+    --color-fondo: #f4f6f9; /* Gris claro */
+    --color-texto: #333333; /* Gris oscuro */
+    --color-blanco: #ffffff;
+}
+
+/* ====== ESTILOS GENERALES ====== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*backgrounf svg*/
+    background-color: #FFFFFF;
+    background: linear-gradient(to bottom, #ffffff, #e3e8ff), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23FFFFFF' stroke-width='0.3' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='rotate(62 1000 750) scale(50) translate(-980 -735)'%3E%3Cuse fill='%23fcfcfc' href='%23s' y='2'/%3E%3Cuse fill='%23fcfcfc' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='2'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='rotate(62 1000 750) scale(50) translate(-980 -735)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='rotate(62 1000 750) scale(50) translate(-980 -735)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='rotate(62 1000 750) scale(50) translate(-980 -735)'%3E%3Cg fill='%23f2f2f2'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='rotate(62 1000 750) scale(50) translate(-980 -735)'%3E%3Cg fill='%23FFFFFF'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23efefef'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='rotate(62 1000 750) scale(50) translate(-980 -735)'%3E%3Cg fill='%23118FFF'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='rotate(62 1000 750) scale(50) translate(-980 -735)'%3E%3Cg fill='%23118FFF'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='rotate(62 1000 750) scale(50) translate(-980 -735)'%3E%3Cg fill='%23118FFF'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* ==== HEADER - NAVBAR ==== */
+header.navbar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+.contenedor-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+/* Ajuste del logo */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.logo-link:hover .logo {
+    transform: scale(1.1);
+}
+/* Estilo del nav-PC */
+nav ul, .nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav li, .nav-links li {
+    margin-right: 20px;
+}
+nav a, .nav-links a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+nav a::after, .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-primario);
+    transition: width 0.3s ease;
+}
+nav a:hover, .nav-links a:hover {
+    color: var(--color-primario);
+}
+nav a:hover::after, .nav-links a:hover::after {
+    width: 100%;
+}
+/* Estilo del nav-MOVIL */
+.menu-toggle {
+    display: none; /* Oculto por defecto en PC */
+    background-color: var(--color-primario);
+    color: white;
+    font-size: 1.4rem;
+    border: none;
+    padding: 6px 10px; /* Ajustamos tamaño más pequeño */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.menu-toggle:hover {
+    background-color: var(--color-secundario);
+}
+/* Menú hamburguesa se activa */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* ====== SECCIÓN INICIO / PRESENTACIÓN ====== */
+.hero {
+    padding: 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+/* Animacion entrada suave */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero-texto {
+    max-width: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+.hero-texto h1 {
+    font-size: 3rem;
+    color: var(--color-texto);
+    margin-bottom: 10px;
+}
+.hero-texto p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+.destacado {
+    color: var(--color-primario);
+    font-weight: bold;
+}
+.slogan {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+/* Botón CTA */
+.btn-cta {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-cta:hover {
+    background-color: #0a4da2;
+    transform: scale(1.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+/* Iconos sociales */
+.iconos-sociales a {
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-right: 20px;
+}
+.iconos-sociales img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.iconos-sociales a:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Foto a la derecha */
+.foto-perfil {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border: none;
+    box-shadow: none;
+}
+
+/* ====== SOBRE MÍ ====== */
+.seccion-izquierda {
+    width: 100%;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+.sobre-mi-contenido {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+.texto-sobre-mi {
+    flex: 3;
+}
+.texto-sobre-mi h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    padding-bottom: 15px;
+}
+.texto-sobre-mi h2::before {
+    content: "🚀 ";
+    font-size: 1.8rem;
+    margin-right: 8px;
+    color: var(--color-secundario);
+    vertical-align: middle;
+}
+/* Línea oculta por defecto */
+.texto-sobre-mi h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 8px;
+    background-color: var(--color-secundario);
+    transition: width 1s ease;
+}
+/* Clase activa: Cuando entra en el viewport */
+.texto-sobre-mi h2.activo::after {
+    width: 100%;
+}
+.texto-sobre-mi p {
+    margin-bottom: 15px;
+}
+mark {
+    background-color: #d0f0d8;
+    padding: 0 4px;
+}
+.imagen-sobre-mi {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagen-sobre-mi img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+}
+/* Alienacion izquierda */
+.seccion-izquierda .sobre-mi-contenido {
+    flex-direction: row-reverse;
+}
+
+/* ====== EXPERIENCIA ====== */
+.seccion-derecha {
+    width: 100%;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+.experiencia-contenido {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+.texto-experiencia {
+    flex: 3;
+}
+.texto-experiencia h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    padding-bottom: 10px;
+}
+.texto-experiencia h2::before {
+    content: "🏆 ";
+    font-size: 1.8rem;
+    margin-right: 8px;
+    color: var(--color-secundario);
+    vertical-align: middle;
+}
+/* Subrayado Amarillo al Entrar */
+.texto-experiencia h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 8px;
+    background-color: var(--color-secundario);
+    transition: width 1s ease;
+}
+.texto-experiencia h2.activo::after {
+    width: 100%;
+}
+.texto-experiencia p {
+    margin-bottom: 15px;
+}
+mark {
+    background-color: #d0f0d8;
+    padding: 0 4px;
+}
+.imagen-experiencia {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagen-experiencia img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+}
+/* Alienación derecha */
+.seccion-derecha .experiencia-contenido {
+    flex-direction: row;
+}
+
+/* ====== HABILIDADES ====== */
+.seccion-izquierda {
+    width: 100%;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+.habilidades-contenido {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+.texto-habilidades {
+    flex: 3;
+}
+.texto-habilidades h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    padding-bottom: 10px;
+}
+.texto-habilidades h2::before {
+    content: "🛠️ ";
+    font-size: 1.8rem;
+    margin-right: 8px;
+    color: var(--color-secundario);
+    vertical-align: middle;
+}
+.texto-habilidades h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 8px;
+    background-color: var(--color-secundario);
+    transition: width 1s ease;
+}
+.texto-habilidades h2.activo::after {
+    width: 100%;
+}
+.texto-habilidades p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-texto);
+    margin-bottom: 15px;
+}
+.barras-habilidades {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.habilidad p {
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+.barra {
+    background-color: #e0e0e0;
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.progreso {
+    background-color: var(--color-primario);
+    height: 100%;
+    text-align: right;
+    line-height: 25px;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+    transition: width 1.5s ease;
+}
+/* Alienación izquierda */
+.seccion-izquierda .habilidades-contenido {
+    flex-direction: row-reverse;
+}
+
+/* ====== FORMULARIO CONTACTO ====== */
+#contacto {
+    padding: 60px;
+}
+.formulario-contacto {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.formulario-contacto h2 {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+.formulario-contacto p {
+    font-size: 1.2rem;
+    color: var(--color-texto);
+    margin-bottom: 20px;
+}
+.campo-formulario {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.campo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 8px rgba(26, 115, 232, 0.2);
+}
+.btn-enviar {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.btn-enviar:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-2px);
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background-color: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* ====== RESPONSIVE GENERAL ====== */
+@media (max-width: 768px) {
+
+    /* ====== HEADER RESPONSIVE ====== */
+    .menu-toggle {
+        display: block; /* Se activa solo en móviles */
+    }
+    .nav-links {
+        display: none; /* Ocultamos por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+    .nav-links.activo {
+        display: flex; /* Mostramos el menú */
+    }
+    .nav-links ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-links li {
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    /* ====== INICIO / PRESENTACIÓN RESPONSIVE ====== */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-texto {
+        max-width: 100%;
+    }
+    .btn-cta {
+        width: 100%;
+    }
+    .foto-perfil {
+        width: 80%;
+        height: auto;
+    }
+
+    /* ====== SOBRE MÍ RESPONSIVE ====== */
+    .seccion-izquierda .sobre-mi-contenido {
+        display: flex;
+        flex-direction: column; /* Aseguramos que el orden sea natural */
+        text-align: center;
+    }
+
+    .sobre-mi-contenido img {
+        max-width: 80%; /* Ajustamos tamaño */
+        height: auto;
+        margin-top: 15px;
+    }
+
+    /* ====== EXPERIENCIA RESPONSIVE ====== */
+    .seccion-derecha .experiencia-contenido {
+        display: flex;
+        flex-direction: column; /* Aseguramos que el orden sea natural */
+        text-align: center;
+    }
+
+    .experiencia-contenido img {
+        max-width: 80%;
+        height: auto;
+        margin-top: 15px;
+    }
+
+
+    /* ====== HABILIDADES RESPONSIVE ====== */
+    .seccion-izquierda .habilidades-contenido {
+        display: flex;
+        flex-direction: column; /* Garantizamos que el texto esté primero */
+        text-align: center;
+    }
+
+    .barras-habilidades {
+        width: 100%;
+    }
+
+    /* ====== FORMULARIO CONTACTO RESPONSIVE ====== */
+    .formulario-contacto {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* ====== FOOTER RESPONSIVE ====== */
+    footer {
+        font-size: 0.9rem;
+    }
+}
